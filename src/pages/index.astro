@@ -3,14 +3,47 @@
 ---
 
 <html lang="en">
-	<head>
-		<meta charset="utf-8" />
-		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-		<meta name="viewport" content="width=device-width" />
-		<meta name="generator" content={Astro.generator} />
-		<title>Astro</title>
-	</head>
-	<body>
-		<h1>Astro</h1>
-	</body>
+  <head>
+    <meta charset="utf-8" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <meta name="viewport" content="width=device-width" />
+    <meta name="generator" content={Astro.generator} />
+    <title>Thomas Coding Advent - 2023</title>
+  </head>
+  <body class="text-gray-0 bg-gray-12 p-16 min-h-screen">
+    <hgroup class="flex flex-col gap-4">
+      <h1 class="text-4xl font-bold">Advent of Code/Svelte 2023</h1>
+      <h2 class="text-gray-7 font-semibold max-w-35ch text-balance">
+        <p>
+          These are my solutions for
+          <a href="https://adventofcode.com/" target="_blank">Advent of Code</a>
+           and
+          <a href="https://advent.sveltesociety.dev" target="_blank"
+            >Advent of Svelte</a
+          > for the year 2023.
+        </p>
+      </h2>
+    </hgroup>
+  </body>
 </html>
+
+<style>
+  .grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+    gap: 0.5rem;
+  }
+
+  a {
+    text-decoration: underline;
+  }
+
+  a:hover {
+    color: var(--clr-gray-0);
+  }
+</style>
+
+<style is:global>
+  @import "../styles/global.css";
+  @import "../styles/colors.css";
+</style>
