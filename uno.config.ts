@@ -53,6 +53,8 @@ const spacingRules: Rule[] = [
   ["h", "height"],
   ["min-w", "min-width"],
   ["min-h", "min-height"],
+  ["max-w", "max-width"],
+  ["max-h", "max-height"],
   ["square", "width", "height"],
   ["gap", "gap"],
   ["right", "right"],
@@ -75,6 +77,11 @@ const spacingRules: Rule[] = [
 export default defineConfig({
   rules: [...colorRules, ...spacingRules],
   presets: [presetUno(), presetIcons()],
+  theme: {
+    fontFamily: {
+      christmas: ["Mountains of Christmas", "cursive"],
+    },
+  },
   content: {
     pipeline: {
       include: [
