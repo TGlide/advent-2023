@@ -1,0 +1,17 @@
+---
+import MainLayout from "@/layouts/MainLayout.astro";
+import type { GetStaticPaths } from "astro";
+export const getStaticPaths = (() => {
+  return [...Array(25)].map((_, i) => ({
+    params: {
+      day: `${i + 1}`,
+    },
+  }));
+}) satisfies GetStaticPaths;
+
+const { day } = Astro.params;
+---
+
+<MainLayout>
+  {day}
+</MainLayout>

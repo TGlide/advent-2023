@@ -3,41 +3,25 @@ import MainLayout from "@/layouts/MainLayout.astro";
 ---
 
 <MainLayout>
-  <h1
-    class="text-4xl font-bold font-christmas flex flex-col gap-20
-    w-[fit-content] mx-auto mbs-16 text-center relative"
-  >
-    <span class="text-2.75rem text-green-3">Thomas's</span>
-    <span class="capitalize text-5xl text-red-5">ADVENT OF CODE</span>
-
-    <div
-      class="i-uil-snowflake absolute top-1/2 -left-128 -translate-y-1/2 text-6xl text-white"
-      aria-hidden
-    >
-    </div>
-
-    <div
-      class="i-uil-snowflake absolute top-1/2 -right-128 -translate-y-1/2 text-6xl text-white"
-      aria-hidden
-    >
-    </div>
-  </h1>
-
   <div
     class="grid grid-cols-[repeat(auto-fit,_minmax(100px,_1fr))] gap-8 mbs-32 mx-auto max-w-600"
   >
     {
       [...Array(25)].map((_, i) => {
         const day = i + 1;
-        return (
-          <a
-            class="grid place-items-center aspect-square border border-gray-1 text-5xl font-christmas 
-            rounded-md p-8"
-            href={`/day-${day}`}
-          >
-            {day}
-          </a>
-        );
+        const isActive = day < 2;
+
+        const classes = `grid place-items-center aspect-square border-2 border-gray-1 text-5xl font-christmas 
+            rounded-md p-8 ${!isActive ? "opacity-25" : ""}`;
+
+        if (isActive) {
+          return (
+            <a class={classes} href={`/day/${day}`}>
+              {day}
+            </a>
+          );
+        }
+        return <div class={classes}>{day}</div>;
       })
     }
   </div>
