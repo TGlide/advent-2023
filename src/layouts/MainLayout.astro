@@ -14,19 +14,19 @@ import MOC700 from "@fontsource/mountains-of-christmas/files/mountains-of-christ
     <meta name="generator" content={Astro.generator} />
     <title>Thomas Coding Advent - 2023</title>
 
-    <link rel="preload" as="font" href={MOC400} type="font/woff2" />
-    <link rel="preload" as="font" href={MOC700} type="font/woff2" />
+    <link rel="preload" as="font" href={MOC400} type="font/woff2" crossorigin />
+    <link rel="preload" as="font" href={MOC700} type="font/woff2" crossorigin />
   </head>
   <body class="text-gray-0 bg-#0C1621 min-h-screen relative">
     <div class="overflow-hidden w-full">
-      <a href="/">
-        <h1
-          class="text-4xl font-bold font-christmas flex flex-col gap-20
-    w-[fit-content] mx-auto text-center relative mbs-32"
-        >
+      <a
+        class="text-4xl font-bold font-christmas flex w-[fit-content] justify-center
+        mx-auto text-center mbs-32"
+        href="/"
+      >
+        <h1 class="flex flex-col gap-20 w-[fit-content] relative">
           <span class="text-2.75rem text-green-3">Thomas's</span>
           <span class="capitalize text-5xl text-red-5">ADVENT OF CODE</span>
-
           <div
             class="i-uil-snowflake absolute top-1/2 -left-128 -translate-y-1/2 text-6xl text-white"
             aria-hidden
