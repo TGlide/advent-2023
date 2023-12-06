@@ -10,13 +10,13 @@
     "astro": "astro"
   },
   "dependencies": {
-    "@astrojs/svelte": "^4.0.4",
+    "@astrojs/svelte": "5.0.0",
     "@fontsource/mountains-of-christmas": "^5.0.17",
     "@iconify-json/fluent": "^1.1.43",
     "@iconify-json/uil": "^1.1.7",
     "@unocss/preset-icons": "^0.57.7",
     "@unocss/preset-uno": "^0.57.7",
-    "astro": "^3.6.4",
+    "astro": "4.0.3",
     "svelte": "^5.0.0-next.17"
   },
   "devDependencies": {
