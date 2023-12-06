@@ -9,10 +9,13 @@ import MainLayout from "@/layouts/MainLayout.astro";
     {
       [...Array(25)].map((_, i) => {
         const day = i + 1;
+        const isEven = day % 2 === 0;
         const isActive = day < 2;
 
-        const classes = `grid place-items-center aspect-square border-2 border-gray-1 text-5xl font-christmas 
-            rounded-md p-8 ${!isActive ? "opacity-25" : ""}`;
+        const classes = `grid place-items-center aspect-square 
+        text-5xl font-christmas rounded-md p-8 
+        ${!isActive ? "opacity-25" : "hover:opacity-75 cursor-pointer"} 
+        ${isEven ? "bg-green-7" : "bg-red-6"}`;
 
         if (isActive) {
           return (
